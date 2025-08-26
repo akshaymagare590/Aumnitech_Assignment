@@ -1,4 +1,7 @@
+
+
 exports.gmail = class gamil {
+
 
     constructor(page) {
         this.page = page;
@@ -17,11 +20,11 @@ exports.gmail = class gamil {
         await this.page.goto("https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=GAlAFw&hl=en-GB&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S2047323881%3A1755959387428774");
     }
 
-    async Login() {
-        await this.email.fill("akshaymagare590@gmail.com");
+    async Login(username, password) {
+        await this.email.fill(username);
         await this.nextEmail.click();
         await this.page.waitForSelector("//input[@type='password']");
-        await this.password.fill("Akshay@1996");
+        await this.password.fill(password);
         await this.nextPassword.click();
     }
 
