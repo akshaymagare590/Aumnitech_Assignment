@@ -13,7 +13,7 @@ test('gmail login', async () => {
 
     const login = new gmail(page);
     await login.GotoLoginPage();
-    await login.Login( testdata.uername,  testdata.password);
+    await login.Login( testdata.username,  testdata.password);
     await login.searchforEmail();
     await login.replyToEmail();
 
