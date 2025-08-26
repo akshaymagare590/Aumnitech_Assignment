@@ -1,5 +1,6 @@
 import { test, expect, chromium } from '@playwright/test';
-import { gmail } from '../page/gmail.js';
+import { gmail } from '../page/gmail.js’;
+Const testdata= json.parse(json.stringfy(require(“mention location of the testdata.json”))))
 
 test('gmail login', async () => {
 
@@ -12,7 +13,7 @@ test('gmail login', async () => {
 
     const login = new gmail(page);
     await login.GotoLoginPage();
-    await login.Login();
+    await login.Login( testdata.uername,  testdata.password);
     await login.searchforEmail();
     await login.replyToEmail();
 
